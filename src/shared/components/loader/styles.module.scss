@@ -1,0 +1,33 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .spinner {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.2rem solid #3e302b;
+    border-top: 0.2rem solid #fcffee;
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(120deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+}
