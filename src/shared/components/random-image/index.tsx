@@ -1,7 +1,7 @@
 import { FC, useCallback, useEffect, useState } from "react";
 import Loader from "../loader";
 import styles from "./styles.module.scss";
-import * as classNames from "classnames";
+import clsx from "clsx";
 
 interface RandomImageProps {
   className?: string;
@@ -56,7 +56,7 @@ const RandomImage: FC<RandomImageProps> = ({
   }, [nextSrc, handleImageLoad, handleLoadNextImage, timer]);
 
   return loading && loader ? (
-    <div className={classNames(className, styles.loader)}>
+    <div className={clsx(className, styles.loader)}>
       <Loader />
     </div>
   ) : (
