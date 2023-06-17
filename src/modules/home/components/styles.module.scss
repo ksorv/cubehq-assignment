@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  --header-height: 55px;
+
+  .header {
+    width: 100%;
+    height: var(--header-height);
+    border-bottom: #0f0f0f20 1px solid;
+    padding: 8px;
+    flex-shrink: 0;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    height: calc(100% - var(--header-height));
+  }
+}
