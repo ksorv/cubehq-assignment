@@ -29,7 +29,7 @@ const Home = () => {
         />
         <Route
           id={"customer-profile-placeholder"}
-          path={"*"}
+          path={"/"}
           element={<CustomerProfilePlaceholder />}
         />
       </Route>
